@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Guess My Number</title>
+</head>
+<body>
+<h1>Guess My Secret Number</h1>
+<h2>Type a number between 1-10 and make a guess!</h2>
+<form action="/guess" method="post">
+  <input type="text" name="guess" size="8"/>
+  <input type="submit" value="Guess!"/>
+</form>
+<p th:each="s : ${guessresults}">
+  <span th:text="${s}"></span>
+</p>
+</body>
+</html>
