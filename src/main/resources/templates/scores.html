@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scores</title>
+</head>
+<body>
+<h1>Scores</h1>
+<h2>Average number of guesses</h2>
+<p th:each="s : ${averageScores}">
+    <span th:text="*{s.getPlayerName()}"></span>
+    <span>: </span>
+    <span th:text="*{s.getAverage()}"></span>
+</p>
+</body>
+</html>
